@@ -1,0 +1,246 @@
+<!-- $Id: index.html Oct 9, 2015 9:44:45 AM tta1516$
+
+ Copyright (C) 2015 Maider Huarte Arrayago
+
+ This file is part of TTA1516_LS-EX_08v5_www.zip.
+
+ TTA1516_LS-EX_08v5_www.zip is based on templates by Eclipse.org - Thym and it is
+ intended for learning purposes only.
+ 
+ TTA1516_LS-EX_08v5_www.zip is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ TTA1516_LS-EX_08v5_www.zip is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details <http://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    	<script src="js/jquery-2.0.2.js"></script>
+    	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta http-equiv="Content-Security-Policy" content="media-src 'self' http://158.227.55.59:8080;
+   															connect-src 'self' http://158.227.55.59:8080;"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
+    	<link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+        <title>TTA1516_LS-EX_08v5</title>
+    </head>
+    <body>
+		
+		
+		<div data-role="page" id="page-0" data-theme="a">
+ 			 <div data-role="header" data-position="fixed">
+    			<h1 class="header-footer">ESMUS</h1>	
+  			</div>
+
+	  		<div data-role="main" class="ui-content">
+	    		<h2>Registro de usuario</h2>   	
+	    		<form id="formulario-0" style="display: none;">
+ 					 <div class="ui-field-contain">
+   						 <label for="elemento-0" >Nombre:</label> 
+    					 <input type="text" name="elemento-0" id="nombre">
+    					 <label for="elemento-1">Apellidos:</label> 
+    					 <input type="text" name="elemento-1" id="apellidos">
+  						 <label for="elemento-2" >Lugar de viaje:</label> 
+    					 <input type="text" name="elemento-2" id="pais">
+    					 <br>
+   					    <a href="#" id="guardarB" class="ui-btn" onclick="save()">GUARDAR</a>
+  					</div>
+				</form>
+						
+   					     <p style="display: none;" id="continuar-0" >
+   					     <h3 id="loginAs"></h3>
+   					     <a href=#page-1 class="ui-btn" data-transition="slide" id="botonC">Continuar</a></p>
+   					     
+   					     
+
+   					     
+	  		</div>
+	  		<div data-role="footer" data-position="fixed">
+	   		    <h1 class="header-footer">Formulario</h1>
+	  		</div>
+ 	</div> 
+ 	
+
+ 
+ 							<!--Fin de pagina de registro-->
+ 							<!-- PAGINA INICIAL CON LOGO Y FRASE -->
+ 	<div data-role="page" id="page-1"  data-theme="a" >
+
+ 	<div data-role="panel" id="myPanel" data-display="push" data-theme="b" data-position="left"> 
+ 	
+	 	<div data-role="header">
+	    		<h2 class="header-footer" data-position="fixed">MENU</h2>
+	    			
+	  	</div>
+	  	<br>
+	    <div>
+	    <ul data-role="listview" id="temasPanel" >   
+	    </ul>
+	    
+	    </div>
+  			<div data-role="footer" data-position="fixed">
+  		     <h1 class="header-footer"></h1>
+ 		</div>
+    </div> 
+ 			 <div data-role="header" data-position="fixed">
+    			 <a href="#myPanel" id="bars-button" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left"  >Menu</a>
+    			
+   				<h1 class="header-footer">ESMUS</h1>
+    		    
+    			<!-- No hace falta en esta pagina <a href="" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-right">Home</a>-->
+  			</div>
+
+	  		<div data-role="main" class="ui-content">
+	  		
+	  			<div id="datosP" style="display:none;" style="text-align:center;" style="padding:0px;">
+	  				<p><h3 id="fraseInit" ></h3></p>
+					<img id="image-0" alt="" src="" width="" height="auto" style="padding:0px;"/>
+					<ul data-role="listview" id="temasPag" >
+					</ul>
+				</div>
+
+				
+	  		
+	 		</div>
+	 		
+	 		<div data-role="footer" data-position="fixed">
+	   		    <h1 class="header-footer" id="nomUser-0"></h1>
+	  		</div>
+	</div>
+	  		
+	  		
+		<!-- PAGINA 2 SELECCION DE SUBTEMATICA POR BOTONES CON IMAGENES-->
+		 <div data-role="page" id="page2" data-theme="a">
+			<div data-role="header">
+			    <h1 class="header-footer">ESMUS</h1>	
+			    <a href="#page-1" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-right">Home</a>
+		  	</div>
+			<div data-role="main" class="ui-content">
+				<div id=contentPag1 style="display:none;">
+				
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+		   		     <h1 class="header-footer" id="nomUser-1"></h1>
+		  		</div>
+		</div>   
+		
+ 
+		<!-- PAGINA 3  FRASES DE LA SUBTEMATICA ELEGIDA CON BOTONES PARA TRADUCIR Y PRACTICAR-->
+		<div data-role="page" id="page-3"  data-theme="a">
+			
+			<div data-role="header" data-position="fixed">
+			<a id="prev-P3" href="#page2" class="ui-btn ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-left">Atras</a>
+			
+			<h1 class="header-footer">ESMUS</h1>
+			<a href="#page-1" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-right">Home</a>
+			</div>
+			<div data-role="main" class="ui-content" id="content-P3">
+			</div>
+		
+	
+		<div data-role="footer" data-position="fixed">
+		     		<h1 class="header-footer" id="nomUser-2"></h1>
+		  		</div>
+			
+			
+			<!-- <div data-role="main" class="ui-content">
+				<h2>Universidad</h2>
+				<div><h4>Frase</h4>
+				<a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-icon-plus ui-shadow ui-btn-inline"></a>
+				<a href="#page-4" class="ui-btn ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-arrow-r ui-btn-icon-right"></a>
+				<div data-role="popup" id="myPopupDialog">traduccion<div>
+				</div>
+				
+				</div>
+				
+				</div>
+			</div> -->
+		</div>
+		<!-- Pgina de frase -->
+		<div data-role="page" id="page-4"  data-theme="a">
+			<div data-role="header">
+				<a href="#page-3" class="ui-btn ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-left">Atras</a>
+				
+			    <h1 class="header-footer">ESMUS</h1>	
+			    <a href="#page-1" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-right">Home</a>
+		  	</div>
+			<div data-role="main" id="content-P4" class="ui-content">
+				
+					
+			</div>
+			<div data-role="footer" data-position="fixed">
+		   		    <h1 class="header-footer" id="nomUser-3"></h1>
+		  		</div>
+		</div>
+		<!-- Pgina de Ajustes -->
+		<div data-role="page" id="ajustesPage" data-theme="a">
+ 			 <div data-role="header" data-position="fixed">
+ 			 <a href="#page-1" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-right">Home</a>
+ 	
+    			<h1 class="header-footer">ESMUS</h1>	
+  			</div>
+
+	  		<div data-role="main" class="ui-content">
+	    		<h2>AJUSTES</h2>   	
+	    		<form id="formulario-1" >
+ 					 <div class="ui-field-contain">
+   						 <label for="elemento-0" >Nombre:</label> 
+    					 <input type="text" name="elementoA-0" >
+    					 <label for="elemento-1">Apellidos:</label> 
+    					 <input type="text" name="elementoA-1" >
+  						 <label for="elemento-2" >Lugar de viaje:</label> 
+    					 <input type="text" name="elementoA-2" >
+    					 <br>
+    					 <p><h3>¡AVISO!Si guarda un nuevo login toda la información de consultas y grabaciones realizadas con el actual usuario se borrara.</h3></p>
+   					    <a href="#page-1" id="guardarB" class="ui-btn" onclick="ajustes()">GUARDAR</a>
+  					</div>
+				</form>
+			</div>
+			<div data-role="footer" data-position="fixed">
+	   		    <h1 class="header-footer">Formulario</h1>
+	  		</div>
+	  </div>
+	  
+	  		<div data-role="page" id="extLink" data-theme="a">
+	  		
+ 			 <div data-role="header" data-position="fixed">
+ 			 	<a href="#page-1" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-right">Home</a>
+
+    			<h1 class="header-footer" id="titleExt"></h1>	
+  			</div>
+
+	  		<div data-role="content" class="ui-content" >
+	  		<div>
+	  		<iframe id="srcExtLink" src="" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0;  overflow:hidden;">
+			    Your browser doesn't support iframes
+			</iframe>
+	    	</div>
+			</div>
+	  </div>
+	  
+	  
+	  
+	  
+	  
+	  
+			
+		
+		<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/objects.js"></script>        
+        <script type="text/javascript" src="js/functions.js"></script>        
+        <script type="text/javascript" src="js/index.js"></script>  
+        <script type="text/javascript" src="js/pagLogic.js"></script>    
+    </body>
+  </html>
